@@ -1,16 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+// import { AppRoutingModule, routingComponents, userRouting } from './app-routing.module';
+
 import { AppComponent } from './app.component';
+import { GroceryListComponent } from './grocery-list/grocery-list.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { GroceryService } from './grocery-service/grocery-service.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GroceryListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [GroceryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

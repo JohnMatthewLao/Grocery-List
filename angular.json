@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "fullstack-app"
+  "defaultProject": "fullstack-app",
+  "cli": {
+    "analytics": false
+  }
 }
